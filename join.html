@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber - Esmeraldas Chamber</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Join the Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="membership">
+            <h2>Why Join the Esmeraldas Chamber?</h2>
+            <p>Unlock exclusive benefits, networking opportunities, and business resources.</p>
+
+            <div class="membership-options">
+                <div class="membership-card">
+                    <h3>Non-Profit</h3>
+                    <p>💡 Free listing in the directory</p>
+                    <p>📢 Access to networking events</p>
+                    <p>💬 Community support</p>
+                </div>
+                <div class="membership-card">
+                    <h3>Silver Membership</h3>
+                    <p>🌟 Everything in Non-Profit</p>
+                    <p>📌 Featured directory listing</p>
+                    <p>🎓 Business training sessions</p>
+                </div>
+                <div class="membership-card">
+                    <h3>Gold Membership</h3>
+                    <p>🏆 Everything in Silver</p>
+                    <p>📣 Social media promotions</p>
+                    <p>🥇 Priority sponsorship</p>
+                </div>
+            </div>
+
+            <h2>Membership Application</h2>
+            <form>
+                <label>Full Name:</label>
+                <input type="text" required>
+
+                <label>Business Name:</label>
+                <input type="text" required>
+
+                <label>Email:</label>
+                <input type="email" required>
+
+                <label>Phone:</label>
+                <input type="tel" required>
+
+                <label>Membership Level:</label>
+                <select>
+                    <option value="non-profit">Non-Profit</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Esmeraldas Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix, Esmeraldas, Ecuador</p>
+            <p>Email: info@esmeraldascoc.org | Phone: (593) 555-2300</p>
+        </div>
+
+        <p>© <span id="year"></span> Esmeraldas Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
