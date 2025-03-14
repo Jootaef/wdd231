@@ -1,0 +1,72 @@
+[
+    { 
+        "name": "Hotel Mar Azul", 
+        "category": "Tourism & Hospitality", 
+        "email": "info@marazul.com", 
+        "phone": "(593) 555-1234", 
+        "website": "https://www.marazul.com", 
+        "image": "business1.jpg", 
+        "membership": 3, 
+        "address": "Av. Malecón, Esmeraldas, Ecuador"
+    },
+    { 
+        "name": "Supermarket Costamar", 
+        "category": "Retail & Commerce", 
+        "email": "info@costamar.com", 
+        "phone": "(593) 555-5678", 
+        "website": "https://www.costamar.com", 
+        "image": "business2.jpg", 
+        "membership": 2, 
+        "address": "Calle Bolívar, Esmeraldas, Ecuador"
+    },
+    { 
+        "name": "Tech Solutions Esmeraldas", 
+        "category": "IT & Services", 
+        "email": "info@techsolutions.com", 
+        "phone": "(593) 555-9101", 
+        "website": "https://www.techsolutions.com", 
+        "image": "business3.jpg", 
+        "membership": 1, 
+        "address": "Av. 10 de Agosto, Esmeraldas, Ecuador"
+    },
+    { 
+        "name": "Restaurante Delicias del Mar", 
+        "category": "Food & Beverage", 
+        "email": "info@deliciasdelmar.com", 
+        "phone": "(593) 555-1122", 
+        "website": "https://www.deliciasdelmar.com", 
+        "image": "business4.jpg", 
+        "membership": 3, 
+        "address": "Av. La Playa, Esmeraldas, Ecuador"
+    },
+    { 
+        "name": "Gimnasio Esmeraldas Fit", 
+        "category": "Health & Wellness", 
+        "email": "info@esmeraldasfit.com", 
+        "phone": "(593) 555-3344", 
+        "website": "https://www.esmeraldasfit.com", 
+        "image": "business5.jpg", 
+        "membership": 2, 
+        "address": "Calle Sucre, Esmeraldas, Ecuador"
+    },
+    { 
+        "name": "Ferretería La Construcción", 
+        "category": "Construction & Supplies", 
+        "email": "info@laconstruccion.com", 
+        "phone": "(593) 555-5566", 
+        "website": "https://www.laconstruccion.com", 
+        "image": "business6.jpg", 
+        "membership": 1, 
+        "address": "Av. Quito, Esmeraldas, Ecuador"
+    },
+    { 
+        "name": "Universidad Técnica de Esmeraldas", 
+        "category": "Education", 
+        "email": "info@utesmeraldas.edu.ec", 
+        "phone": "(593) 555-7788", 
+        "website": "https://www.utesmeraldas.edu.ec", 
+        "image": "business7.jpg", 
+        "membership": 3, 
+        "address": "Campus Universitario, Esmeraldas, Ecuador"
+    }
+]
