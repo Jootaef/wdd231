@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Join the Chamber of Commerce Directory and connect with local businesses to boost your business.">
   <meta name="author" content="Jaydan Valencia">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="Find local businesses and their contact details on the Chamber website."/>
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://jootaef.github.io/WDD231/chamber/images/gc_logo.png" />
-  <meta property="og:url" content="https://jootaef.github.io/WDD231/chamber/directory.html" />
+  
+  <!-- Open Graph Data (sin trailing slash) -->
+  <meta property="og:title" content="Find local businesses and their contact details on the Chamber website">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/gc_logo.png">
+  <meta property="og:url" content="directory.html">
 
-  <!-- Favicon -->
-  <link rel="icon" href="/chamber/images/gc_favicon.png">
+  <!-- Favicon (ruta local) -->
+  <link rel="icon" href="images/gc_favicon.png" type="image/png">
 
-  <!-- CSS Files -->
+  <!-- CSS Files (Asegura que existan) -->
+  <!-- Ajusta las rutas según tu carpeta real: "styles/" dentro de "chamber/" -->
   <link rel="stylesheet" href="styles/directory_brief.css">
   <link rel="stylesheet" href="styles/directory_middle.css">
   <link rel="stylesheet" href="styles/directory_small.css">
@@ -23,15 +25,18 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" 
+    rel="stylesheet">
 
   <!-- Font Awesome (opcional) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- JavaScript -->
+  <!-- JavaScript (Asegura que directory.js exista en scripts/) -->
   <script src="scripts/directory.js" defer></script>
 
-  <title>Great Chance</title>
+  <!-- Título más descriptivo -->
+  <title>Esmeraldas Chamber of Commerce — Great Chance</title>
 </head>
 <body>
   <header>
@@ -39,7 +44,7 @@
     <h1>Great Chance</h1>
     <h4>Chamber of Commerce</h4>
 
-    <!-- Botón Hambúrguer -->
+    <!-- Botón Hamburger -->
     <button class="menu-toggle" id="menuToggle">☰</button>
 
     <!-- Menú Lateral -->
@@ -47,45 +52,28 @@
       <img class="titleImage" src="images/gc_logo.png" alt="Chamber Logo">
       <a href="index.html">Home</a>
       <a href="discover.html">Discover</a>
-      <a href="directory.html">Business Directory</a>
+      <a href="directory.html" class="active">Business Directory</a>
       <a href="join.html">Join</a>
     </nav>
   </header>
 
-  <main id="home_page">
-    <div class="positionHero">
-      <img class="hero" src="images/hero_image.jpg" alt="A man thinking about great opportunities.">
-      <button class="join">Join us</button>
+  <main>
+    <!-- Sección de filtros Grid/List -->
+    <div class="companyFilter">
+      <button id="grid">
+        <i class="fas fa-th"></i>
+      </button>
+      <button id="list">
+        <i class="fa-solid fa-list"></i>
+      </button>
     </div>
+    <hr>
 
-    <h1>Home</h1>
-
-    <div class="grid-weather">
-      <section class="events">
-        <h3>Events</h3>
-      </section>
-
-      <section class="current">
-        <h3>Current Weather</h3>
-        <img id="weatherIcon" alt="Weather Icon">
-        <div class="currentParagraphs">
-          <!-- JS will populate weather data here -->
-        </div>
-      </section>
-
-      <section class="forecast">
-        <h3>Weather Forecast</h3>
-        <div class="forecastParagraphs">
-          <!-- JS will populate 3-day forecast here -->
-        </div>
-      </section>
-    </div>
-
-    <div>
-      <article class="spotlights">
-        <!-- JS will populate spotlights here -->
-      </article>
-    </div>
+    <!-- Contenedor donde se inyectan los miembros -->
+    <article class="grid">
+      <h2>Our Business Members</h2>
+      <!-- El validador sugiere que cada <article> tenga un heading (por ejemplo <h2>) -->
+    </article>
   </main>
 
   <footer>
@@ -111,7 +99,7 @@
     </div>
     <div>
       <p>
-        WDD231 Class Project 
+        WDD231 Class Project
         <br>Jaydan Valencia
         <br>&copy; <span id="currentyear"></span> Great Chance
         <br><span id="lastModified"></span>
