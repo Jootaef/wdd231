@@ -1,110 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Join the Chamber of Commerce Directory and connect with local businesses to boost your business.">
-  <meta name="author" content="Jaydan Valencia">
-  
-  <!-- Open Graph Data (sin trailing slash) -->
-  <meta property="og:title" content="Find local businesses and their contact details on the Chamber website">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/gc_logo.png">
-  <meta property="og:url" content="directory.html">
-
-  <!-- Favicon (ruta local) -->
-  <link rel="icon" href="images/gc_favicon.png" type="image/png">
-
-  <!-- CSS Files (Asegura que existan) -->
-  <!-- Ajusta las rutas según tu carpeta real: "styles/" dentro de "chamber/" -->
-  <link rel="stylesheet" href="styles/directory_brief.css">
-  <link rel="stylesheet" href="styles/directory_middle.css">
-  <link rel="stylesheet" href="styles/directory_small.css">
-  <link rel="stylesheet" href="styles/directory_mobile.css">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" 
-    rel="stylesheet">
-
-  <!-- Font Awesome (opcional) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!-- JavaScript (Asegura que directory.js exista en scripts/) -->
-  <script src="scripts/directory.js" defer></script>
-
-  <!-- Título más descriptivo -->
-  <title>Esmeraldas Chamber of Commerce — Great Chance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esmeraldas Chamber of Commerce - Home Page">
+    <meta name="author" content="Jaydan Valencia">
+    <meta property="og:title" content="Esmeraldas Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://jootaef.github.io/WDD231/chamber/">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+    <title>Esmeraldas Chamber of Commerce</title>
 </head>
 <body>
-  <header>
-    <img class="titleImage" src="images/gc_logo.png" alt="Chamber Logo">
-    <h1>Great Chance</h1>
-    <h4>Chamber of Commerce</h4>
-
-    <!-- Botón Hamburger -->
-    <button class="menu-toggle" id="menuToggle">☰</button>
-
-    <!-- Menú Lateral -->
-    <nav id="menu" class="sidebar">
-      <img class="titleImage" src="images/gc_logo.png" alt="Chamber Logo">
-      <a href="index.html">Home</a>
-      <a href="discover.html">Discover</a>
-      <a href="directory.html" class="active">Business Directory</a>
-      <a href="join.html">Join</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Sección de filtros Grid/List -->
-    <div class="companyFilter">
-      <button id="grid">
-        <i class="fas fa-th"></i>
-      </button>
-      <button id="list">
-        <i class="fa-solid fa-list"></i>
-      </button>
-    </div>
-    <hr>
-
-    <!-- Contenedor donde se inyectan los miembros -->
-    <article class="grid">
-      <h2>Our Business Members</h2>
-      <!-- El validador sugiere que cada <article> tenga un heading (por ejemplo <h2>) -->
-    </article>
-  </main>
-
-  <footer>
-    <div>
-      <p>
-        <b>Great Chance</b><br>
-        Av. Malecón<br>
-        Esmeraldas, Ecuador<br>
-        info@greatchance.org<br>
-        +593 99999-9999
-      </p>
-    </div>
-    <div class="social">
-      <a href="https://www.facebook.com/jaydan.valencia" target="_blank">
-        <img src="images/youtube.png" alt="fb icon">
-      </a>
-      <a href="https://twitter.com" target="_blank">
-        <img src="images/twitter.png" alt="twitter icon">
-      </a>
-      <a href="https://www.linkedin.com/in/jaydanvalencia/" target="_blank">
-        <img src="images/linkedin.png" alt="linkedin icon">
-      </a>
-    </div>
-    <div>
-      <p>
-        WDD231 Class Project
-        <br>Jaydan Valencia
-        <br>&copy; <span id="currentyear"></span> Great Chance
-        <br><span id="lastModified"></span>
-      </p>
-    </div>
-  </footer>
+    <header>
+        <h1>Esmeraldas Chamber of Commerce</h1>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="https://github.com/Jootaef">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/jaydanvalencia/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Chamber of Commerce">
+            <h2>Join Us and Grow Your Business!</h2>
+            <a href="join.html" class="cta-button">Join Now</a>
+        </section>
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Business Networking - April 10, 2025</li>
+                <li>Marketing Strategies - April 20, 2025</li>
+                <li>Annual Gala - May 5, 2025</li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h2>Local Weather</h2>
+            <p>Temperature: <span id="temperature"></span>°C</p>
+            <p>Condition: <span id="condition"></span></p>
+            <h3>3-Day Forecast</h3>
+            <ul id="forecast"></ul>
+        </section>
+        <section class="spotlight">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce | Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
