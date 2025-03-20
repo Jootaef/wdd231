@@ -221,3 +221,61 @@ footer {
 }
 
 
+/* Estilo base del menú */
+nav {
+    background-color: black;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Resaltar la página activa */
+nav ul li a.active {
+    color: yellow;
+}
+
+/* Estilos para móviles */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menú oculto en móviles */
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        background: black;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu.open {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+}

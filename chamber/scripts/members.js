@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     async function fetchMembers() {
         try {
-            const response = await fetch("data/members.json"); // Ruta ajustada
+            const response = await fetch("data/members.json"); 
             if (!response.ok) {
                 throw new Error("Failed to fetch members data");
             }
