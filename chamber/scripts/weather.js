@@ -1,32 +1,84 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
-    const city = "Esmeraldas";
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+    const temperatureSpan = document.getElementById("temperature");
+    const conditionSpan = document.getElementById("condition");
+    const weatherIcon = document.getElementById("weather-icon");
+    const forecastContainer = document.getElementById("forecast");
 
-    try {
-        const weatherResponse = await fetch(weatherUrl);
-        const forecastResponse = await fetch(forecastUrl);
+    const API_KEY = "43c4053a8ecc7f940709a78d97a2eded"; 
+    const CITY = "Esmeraldas";
+    const COUNTRY = "EC";
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
 
-        if (!weatherResponse.ok || !forecastResponse.ok) {
-            throw new Error("Weather data not available");
+    async function fetchWeather() {
+        try {
+            const response = await fetch(URL);
+            console.log(" This is the variable response:", response);
+            if (!response.ok) {
+                throw new Error("Failed to fetch weather data.");
+            }
+            const data = await response.json();
+            console.log(" This is the variable data:", data);
+
+            // Extract temperature and weather conditions
+            const temperature = Math.round(data.main.temp);
+            const condition = data.weather[0].description;
+            const iconCode = data.weather[0].icon;
+            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+            // Update the page with the weather information
+            temperatureSpan.textContent = temperature;
+            conditionSpan.textContent = condition;
+            weatherIcon.src = iconUrl;
+            weatherIcon.alt = condition;
+
+            // Fetch the 3-day weather forecast
+            await fetchForecast();
+        } catch (error) {
+            console.error("Error fetching weather data:", error);
+
+            // If an error occurs, display the local image instead
+            weatherIcon.src = "images/weather.jpg";
+            weatherIcon.alt = "Weather image";
+            temperatureSpan.textContent = "--";
+            conditionSpan.textContent = "Unavailable";
         }
-
-        const weatherData = await weatherResponse.json();
-        const forecastData = await forecastResponse.json();
-
-        document.getElementById("temperature").textContent = weatherData.main.temp;
-        document.getElementById("condition").textContent = weatherData.weather[0].description;
-        document.getElementById("weatherIcon").src = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-
-        const forecastContainer = document.getElementById("forecast");
-        forecastContainer.innerHTML = "";
-        for (let i = 0; i < 3; i++) {
-            const forecastItem = document.createElement("li");
-            forecastItem.textContent = `Day ${i + 1}: ${forecastData.list[i * 8].main.temp}°C - ${forecastData.list[i * 8].weather[0].description}`;
-            forecastContainer.appendChild(forecastItem);
-        }
-    } catch (error) {
-        console.error("Error fetching weather data:", error);
     }
+
+    async function fetchForecast() {
+        const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
+
+        try {
+            const response = await fetch(forecastURL);
+            if (!response.ok) {
+                throw new Error("Failed to fetch weather forecast.");
+            }
+            const data = await response.json();
+
+            // Clear previous content
+            forecastContainer.innerHTML = "";
+
+            // Extract data every 8 hours (~3-day forecast)
+            for (let i = 0; i < data.list.length; i += 8) {
+                const forecast = data.list[i];
+                const date = new Date(forecast.dt_txt).toLocaleDateString();
+                const temp = Math.round(forecast.main.temp);
+                const iconCode = forecast.weather[0].icon;
+                const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+                // Create the forecast item
+                const forecastItem = document.createElement("li");
+                forecastItem.innerHTML = `
+                    <img src="${iconUrl}" alt="Weather icon">
+                    <p>${date}</p>
+                    <p>${temp}°C</p>
+                `;
+                forecastContainer.appendChild(forecastItem);
+            }
+        } catch (error) {
+            console.error("Error fetching forecast:", error);
+            forecastContainer.innerHTML = "<p>Forecast unavailable.</p>";
+        }
+    }
+
+    await fetchWeather();
 });
