@@ -279,3 +279,128 @@ nav ul li a.active {
         display: block;
     }
 }
+
+
+
+
+/* === Styles for join.html and thankyou.html === */
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #1f4b70;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #1f4b70;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #143955;
+}
+
+/* Thank You Page Styling */
+main ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+main ul li span {
+    font-weight: normal;
+    color: #1f4b70;
+}
+
+/* Membership Card Styles (for future modal links) */
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.membership-cards .card {
+    width: 250px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #1f4b70;
+    transition: transform 0.5s ease, opacity 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInCard 1s forwards;
+}
+
+.membership-cards .card h3 {
+    color: #1f4b70;
+    margin-bottom: 10px;
+}
+
+.membership-cards .card a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+}
+
+/* Animación para las tarjetas */
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .membership-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

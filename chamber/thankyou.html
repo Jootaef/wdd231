@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esmeraldas Chamber of Commerce - Thank You Page">
+  <meta name="author" content="Jaydan Valencia">
+
+  <title>Thank You - Esmeraldas Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="Esmeraldas Chamber of Commerce Logo">
+    </div>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="https://github.com/Jootaef">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jaydanvalencia/">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Thank You for Joining!</h1>
+    <p>We appreciate your interest in joining the Chamber of Commerce.</p>
+    <h2>Your Submission:</h2>
+    <ul>
+      <li><strong>First Name:</strong> <span id="fname"></span></li>
+      <li><strong>Last Name:</strong> <span id="lname"></span></li>
+      <li><strong>Email:</strong> <span id="email"></span></li>
+      <li><strong>Phone:</strong> <span id="phone"></span></li>
+      <li><strong>Business:</strong> <span id="business"></span></li>
+      <li><strong>Submitted On:</strong> <span id="timestamp"></span></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce | Ecuador</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("fname").textContent = params.get("fname");
+    document.getElementById("lname").textContent = params.get("lname");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("phone").textContent = params.get("phone");
+    document.getElementById("business").textContent = params.get("business");
+    document.getElementById("timestamp").textContent = params.get("timestamp");
+  </script>
+</body>
+</html>
