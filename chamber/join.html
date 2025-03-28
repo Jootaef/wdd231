@@ -67,6 +67,102 @@
     </form>
   </main>
 
+
+  <div class="membership-cards">
+    <div class="card" id="np-card">
+      <h3>NP Membership</h3>
+      <a href="#" onclick="openModal('modal-np')">More Info</a>
+    </div>
+    <div class="card" id="bronze-card">
+      <h3>Bronze Membership</h3>
+      <a href="#" onclick="openModal('modal-bronze')">More Info</a>
+    </div>
+    <div class="card" id="silver-card">
+      <h3>Silver Membership</h3>
+      <a href="#" onclick="openModal('modal-silver')">More Info</a>
+    </div>
+    <div class="card" id="gold-card">
+      <h3>Gold Membership</h3>
+      <a href="#" onclick="openModal('modal-gold')">More Info</a>
+    </div>
+  </div>
+  
+  <!-- NP Membership Modal -->
+  <div id="modal-np" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-np')">&times;</span>
+      <h2>NP Membership Benefits</h2>
+      <ul>
+        <li>Free membership</li>
+        <li>Access to events and networking</li>
+        <li>Community involvement</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Bronze Membership Modal -->
+  <div id="modal-bronze" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+      <h2>Bronze Membership Benefits</h2>
+      <ul>
+        <li>Event discounts</li>
+        <li>Newsletter mentions</li>
+        <li>Website listing</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Silver Membership Modal -->
+  <div id="modal-silver" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+      <h2>Silver Membership Benefits</h2>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Spotlight advertising on homepage</li>
+        <li>Priority networking invites</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Gold Membership Modal -->
+  <div id="modal-gold" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+      <h2>Gold Membership Benefits</h2>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Featured business profile</li>
+        <li>Exclusive training sessions</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+  
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+  </script>
+  
+
+
+
+
+
   <footer>
     <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce | Ecuador</p>
     <p id="lastModified"></p>
