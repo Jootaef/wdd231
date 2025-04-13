@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Malecón de Esmeraldas",
+      "image": "images/malecon.webp",
+      "address": "Av. Malecón, Esmeraldas, Ecuador",
+      "description": "Un paseo junto al río con esculturas, áreas recreativas y una hermosa vista al océano Pacífico."
+    },
+    {
+      "name": "Museo Regional de Esmeraldas",
+      "image": "images/museo.webp",
+      "address": "Calle Bolívar, Esmeraldas, Ecuador",
+      "description": "Exhibe la historia y cultura afroecuatoriana con piezas arqueológicas, arte y tradiciones locales."
+    },
+    {
+      "name": "Playa Las Palmas",
+      "image": "images/laspalmas.webp",
+      "address": "Av. Las Palmas, Esmeraldas, Ecuador",
+      "description": "Una de las playas más populares, ideal para nadar, surfear y disfrutar del atardecer."
+    },
+    {
+      "name": "EcoParque Samán",
+      "image": "images/saman.webp",
+      "address": "Km 5 vía Atacames, Esmeraldas, Ecuador",
+      "description": "Un parque ecológico con senderos, lagos, y actividades para toda la familia."
+    },
+    {
+      "name": "Estadio Folke Anderson",
+      "image": "images/estadio.webp",
+      "address": "Calle Colón, Esmeraldas, Ecuador",
+      "description": "Centro deportivo histórico y sede de eventos deportivos y culturales importantes."
+    },
+    {
+      "name": "Río Esmeraldas",
+      "image": "images/rioesmeraldas.webp",
+      "address": "Cruza la ciudad de Esmeraldas, Ecuador",
+      "description": "Importante río costero que atraviesa la ciudad y desemboca en el océano Pacífico."
+    },
+    {
+      "name": "Catedral Cristo Rey",
+      "image": "images/catedral.webp",
+      "address": "Av. Eloy Alfaro y Bolívar, Esmeraldas, Ecuador",
+      "description": "Icono arquitectónico de la ciudad, reconocida por su fachada moderna y su importancia religiosa."
+    },
+    {
+      "name": "Parque Infantil Roberto Luis Cervantes",
+      "image": "images/parqueinfantil.webp",
+      "address": "Barrio 24 de Mayo, Esmeraldas, Ecuador",
+      "description": "Parque familiar con juegos para niños, áreas verdes y zonas de descanso."
+    }
+  ]
+  
