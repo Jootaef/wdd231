@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Discover Esmeraldas</title>
-  <meta name="description" content="Discover Esmeraldas - Chamber of Commerce" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/discover.css" />
-  <script defer src="scripts/discover.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find local businesses and their contact details in Esmeraldas, Ecuador.">
+    <meta name="author" content="Jaydan Valencia">
+
+    <meta property="og:title" content="Esmeraldas Chamber of Commerce - Business Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jootaef.github.io/WDD231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://jootaef.github.io/WDD231/chamber/directory.html">
+    <meta property="og:description" content="Find local businesses and their contact details in Esmeraldas, Ecuador.">
+
+    <title>Esmeraldas Chamber of Commerce - Business Directory</title>
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="chamber/images/favicon.ico" type="image/x-icon">
+    
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+    <script src="scripts/members.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="images/logo.jpg" alt="Esmeraldas Chamber of Commerce Logo" />
-    </div>
-    <nav>
-      <button id="menu-toggle">☰</button>
-      <ul id="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-        <li><a href="discover.html" class="active">Discover</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <img src="images/profile.jpg" alt="Profile Picture">
+        <span>Jaydan Valencia</span>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="https://github.com/Jootaef">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/jaydanvalencia/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="discover-grid">
-    <aside class="sidebar" id="visitMessage">
-      <!-- Message will be injected here -->
-    </aside>
+    <main>
+        <h1>Business Directory</h1>
+        <section class="directory">
+            <h2>Our Members</h2>
+            <div class="view-toggle">
+                <button id="grid-view">Grid View</button>
+                <button id="list-view">List View</button>
+            </div>
+            <div id="members-container" class="grid">
+                <div class="card">
+                    <img src="images/businesses/company1.jpg" alt="Company 1">
+                    <div class="card-content">
+                        <h3>Company 1</h3>
+                        <p>Contact: contact@company1.com</p>
+                        <p>Phone: 123-456-7890</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/businesses/company2.jpg" alt="Company 2">
+                    <div class="card-content">
+                        <h3>Company 2</h3>
+                        <p>Contact: contact@company2.com</p>
+                        <p>Phone: 987-654-3210</p>
+                    </div>
+                </div>
 
-    <section class="gallery" id="gallery">
-      <!-- Cards will be injected with JS -->
-    </section>
-  </main>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce | Ecuador</p>
-    <p id="lastModified"></p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
-  </script>
+    <footer>
+        <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce | Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
