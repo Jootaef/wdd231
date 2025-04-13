@@ -170,7 +170,6 @@ footer {
     color: #333;
 }
 
-/* List View */
 .list {
     display: block;
 }
@@ -326,7 +325,6 @@ form input[type="submit"]:hover {
     background-color: #143955;
 }
 
-/* Thank You Page Styling */
 main ul {
     list-style-type: none;
     padding: 0;
@@ -352,7 +350,6 @@ main ul li span {
     color: #1f4b70;
 }
 
-/* Membership Card Styles (for future modal links) */
 .membership-cards {
     display: flex;
     flex-wrap: wrap;
@@ -385,7 +382,6 @@ main ul li span {
     font-weight: bold;
 }
 
-/* Animación para las tarjetas */
 @keyframes fadeInCard {
     to {
         opacity: 1;
@@ -462,3 +458,18 @@ main ul li span {
     text-align: center;
     max-width: 250px;
 }
+@media (max-width: 768px) {
+    form label {
+      display: block;
+      width: 100%;
+    }
+  
+    .membership-cards {
+      display: block;
+    }
+  
+    .card {
+      margin-bottom: 1rem;
+    }
+  }
+  
