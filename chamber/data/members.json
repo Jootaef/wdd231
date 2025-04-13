@@ -6,7 +6,7 @@
         "phone": "(593) 555-1234",
         "website": "https://www.marazul.com",
         "image": "business1.jpg",
-        "membership": 3,
+        "membership": "Gold",
         "address": "Av. Malecón, Esmeraldas, Ecuador"
     },
     {
@@ -16,7 +16,7 @@
         "phone": "(593) 555-5678",
         "website": "https://www.costamar.com",
         "image": "business2.jpg",
-        "membership": 2,
+        "membership": "Silver",
         "address": "Calle Bolívar, Esmeraldas, Ecuador"
     },
     {
@@ -26,7 +26,7 @@
         "phone": "(593) 555-9101",
         "website": "https://www.techsolutions.com",
         "image": "business3.jpg",
-        "membership": 1,
+        "membership": "Bronze",
         "address": "Av. 10 de Agosto, Esmeraldas, Ecuador"
     },
     {
@@ -36,7 +36,7 @@
         "phone": "(593) 555-1122",
         "website": "https://www.deliciasdelmar.com",
         "image": "business4.jpg",
-        "membership": 3,
+        "membership": "Gold",
         "address": "Av. La Playa, Esmeraldas, Ecuador"
     },
     {
@@ -46,7 +46,7 @@
         "phone": "(593) 555-3344",
         "website": "https://www.esmeraldasfit.com",
         "image": "business5.jpg",
-        "membership": 2,
+        "membership": "Silver",
         "address": "Calle Sucre, Esmeraldas, Ecuador"
     },
     {
@@ -56,7 +56,7 @@
         "phone": "(593) 555-5566",
         "website": "https://www.laconstruccion.com",
         "image": "business6.jpg",
-        "membership": 1,
+        "membership": "Bronze",
         "address": "Av. Quito, Esmeraldas, Ecuador"
     },
     {
@@ -66,7 +66,7 @@
         "phone": "(593) 555-7788",
         "website": "https://www.utesmeraldas.edu.ec",
         "image": "business7.jpg",
-        "membership": 3,
+        "membership": "Gold",
         "address": "Campus Universitario, Esmeraldas, Ecuador"
     }
 ]
