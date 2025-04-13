@@ -1,16 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Esmeraldas Chamber of Commerce - Join Page">
   <meta name="author" content="Jaydan Valencia">
-
   <title>Join - Esmeraldas Chamber of Commerce</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
   <script defer src="scripts/navigation.js"></script>
-  <script defer src="scripts/date.js"></script>
-  <script defer src="scripts/form.js"></script>
+  <script defer src="scripts/form.js"></script> <!-- Cambié 'date.js' por 'form.js' porque el script parece ser más relevante aquí -->
 </head>
 <body>
   <header>
@@ -67,7 +66,7 @@
     </form>
   </main>
 
-
+  <!-- Membership Cards -->
   <div class="membership-cards">
     <div class="card" id="np-card">
       <h3>NP Membership</h3>
@@ -86,8 +85,8 @@
       <a href="#" onclick="openModal('modal-gold')">More Info</a>
     </div>
   </div>
-  
-  <!-- NP Membership Modal -->
+
+  <!-- Membership Modals -->
   <div id="modal-np" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal-np')">&times;</span>
@@ -100,7 +99,6 @@
     </div>
   </div>
   
-  <!-- Bronze Membership Modal -->
   <div id="modal-bronze" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
@@ -113,7 +111,6 @@
     </div>
   </div>
   
-  <!-- Silver Membership Modal -->
   <div id="modal-silver" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal-silver')">&times;</span>
@@ -126,7 +123,6 @@
     </div>
   </div>
   
-  <!-- Gold Membership Modal -->
   <div id="modal-gold" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal-gold')">&times;</span>
@@ -138,16 +134,18 @@
       </ul>
     </div>
   </div>
-  
+
+  <!-- Modal Scripts -->
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = "block";
     }
-  
+
     function closeModal(id) {
       document.getElementById(id).style.display = "none";
     }
-  
+
+    // Close modal if clicking outside of it
     window.onclick = function(event) {
       const modals = document.querySelectorAll('.modal');
       modals.forEach(modal => {
@@ -156,20 +154,24 @@
         }
       });
     };
+
+    // Set timestamp for form submission
+    document.getElementById("timestamp").value = new Date().toISOString();
   </script>
-  
 
-
-
-
-
+  <!-- Footer -->
   <footer>
     <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce | Ecuador</p>
     <p id="lastModified"></p>
   </footer>
 
   <script>
-    document.getElementById("timestamp").value = new Date().toISOString();
+    // Set current year dynamically in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+    
+    // Optional: Display last modified date
+    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
   </script>
+
 </body>
 </html>

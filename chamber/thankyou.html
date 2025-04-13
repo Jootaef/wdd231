@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Esmeraldas Chamber of Commerce - Thank You Page">
   <meta name="author" content="Jaydan Valencia">
-
   <title>Thank You - Esmeraldas Chamber of Commerce</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
   <script defer src="scripts/navigation.js"></script>
-  <script defer src="scripts/date.js"></script>
 </head>
 <body>
   <header>
@@ -49,13 +47,20 @@
   </footer>
 
   <script>
+    // Retrieve form data from URL parameters
     const params = new URLSearchParams(window.location.search);
-    document.getElementById("fname").textContent = params.get("fname");
-    document.getElementById("lname").textContent = params.get("lname");
+    document.getElementById("fname").textContent = params.get("firstName");
+    document.getElementById("lname").textContent = params.get("lastName");
     document.getElementById("email").textContent = params.get("email");
     document.getElementById("phone").textContent = params.get("phone");
-    document.getElementById("business").textContent = params.get("business");
-    document.getElementById("timestamp").textContent = params.get("timestamp");
+    document.getElementById("business").textContent = params.get("organization");
+    document.getElementById("timestamp").textContent = new Date(params.get("timestamp")).toLocaleString();
+
+    // Optional: Display current year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+    
+    // Optional: Display last modified date
+    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
   </script>
 </body>
 </html>

@@ -207,7 +207,6 @@ footer {
     margin-left: auto;
 }
 
-/* Membership Levels */
 .gold {
     border-left: 5px solid gold;
 }
@@ -221,7 +220,6 @@ footer {
 }
 
 
-/* Estilo base del menú */
 nav {
     background-color: black;
     padding: 10px;
@@ -246,12 +244,10 @@ nav ul li a {
     padding: 10px;
 }
 
-/* Resaltar la página activa */
 nav ul li a.active {
     color: yellow;
 }
 
-/* Estilos para móviles */
 #menu-toggle {
     display: none;
     background: none;
@@ -261,7 +257,6 @@ nav ul li a.active {
     cursor: pointer;
 }
 
-/* Menú oculto en móviles */
 @media (max-width: 768px) {
     #menu {
         display: none;
