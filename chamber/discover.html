@@ -1,77 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find local businesses and their contact details in Esmeraldas, Ecuador.">
-    <meta name="author" content="Jaydan Valencia">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover beaches, culture and key businesses in Esmeraldas, Ecuador." />
+  <meta name="author" content="Jaydan Valencia" />
 
-    <meta property="og:title" content="Esmeraldas Chamber of Commerce - Business Directory">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://jootaef.github.io/WDD231/chamber/images/hero.jpg">
-    <meta property="og:url" content="https://jootaef.github.io/WDD231/chamber/directory.html">
-    <meta property="og:description" content="Find local businesses and their contact details in Esmeraldas, Ecuador.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Esmeraldas Chamber of Commerce – Discover" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://jootaef.github.io/WDD231/chamber/images/hero.jpg" />
+  <meta property="og:url" content="https://jootaef.github.io/WDD231/chamber/discover.html" />
+  <meta property="og:description" content="Explore the must‑see places in the Green Province and plan your next visit." />
 
-    <title>Esmeraldas Chamber of Commerce - Business Directory</title>
-    
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="chamber/images/favicon.ico" type="image/x-icon">
-    
-    <script src="../scripts/navigation.js" defer></script>
-    <script src="../scripts/date.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+  <title>Discover Esmeraldas | Chamber of Commerce</title>
+
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/discover.css" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <script src="../scripts/navigation.js" defer></script>
+  <script src="../scripts/date.js" defer></script>
+  <!-- Page‑specific script -->
+  <script src="scripts/discover.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <img src="images/profile.jpg" alt="Profile Picture">
-        <span>Jaydan Valencia</span>
-        <nav>
-            <button id="menu-toggle">☰</button>
-            <ul id="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html" class="active">Discover</a></li>
-                <li><a href="https://github.com/Jootaef">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/jaydanvalencia/">LinkedIn</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <img src="images/profile.jpg" alt="Profile picture" />
+    <span>Jaydan Valencia</span>
 
-    <main>
-        <h1>Business Directory</h1>
-        <section class="directory">
-            <h2>Our Members</h2>
-            <div class="view-toggle">
-                <button id="grid-view">Grid View</button>
-                <button id="list-view">List View</button>
-            </div>
-            <div id="members-container" class="grid">
-                <div class="card">
-                    <img src="images/business1.jpg" alt="Company 1">
-                    <div class="card-content">
-                        <h3>Company 1</h3>
-                        <p>Contact: contact@company1.com</p>
-                        <p>Phone: 123-456-7890</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="images/business2.jpg" alt="Company 2">
-                    <div class="card-content">
-                        <h3>Company 2</h3>
-                        <p>Contact: contact@company2.com</p>
-                        <p>Phone: 987-654-3210</p>
-                    </div>
-                </div>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="https://github.com/Jootaef">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jaydanvalencia/">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            </div>
-        </section>
-    </main>
+  <!-- ===== MAIN ===== -->
+  <main class="discover-layout">
+    <!-- Last‑visit message -->
+    <aside id="visit-msg" class="visit"></aside>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce | Ecuador</p>
-        <p id="lastModified"></p>
-    </footer>
+    <!-- Cards gallery -->
+    <section id="gallery" class="cards"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Esmeraldas Chamber of Commerce&nbsp;|&nbsp;Ecuador</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

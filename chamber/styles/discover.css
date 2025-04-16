@@ -1,0 +1,100 @@
+/* ---------- Global helpers ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+:root {
+  --clr-bg-card: #ffffff;
+  --clr-bg-visit: #f0f0f0;
+  --clr-text-body: #212121;
+  --clr-text-muted: #555555;
+  --clr-accent: #0b6efd;        /* AA‑compliant on white */
+  --radius: .5rem;
+  --shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+body { color: var(--clr-text-body); }
+
+/* ---------- Main layout ---------- */
+.discover-layout {
+  display: grid;
+  grid-template-areas:
+    "visit"
+    "cards";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ---------- Sections ---------- */
+.cards { grid-area: cards; display: grid; gap: 1rem; }
+.visit {
+  grid-area: visit;
+  background: var(--clr-bg-visit);
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+/* ---------- Card ---------- */
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto auto;
+  background: var(--clr-bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card figure  { margin: 0; }
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;             /* no overflow */
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.card address { font-style: normal; font-size: .9rem; color: var(--clr-text-muted); margin: .5rem 0; }
+
+.card button {
+  margin: .8rem;
+  padding: .6rem 1rem;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+  background: var(--clr-accent);
+  color: #fff;
+  font-weight: 600;
+}
+.card button:focus-visible {
+  outline: 3px dashed var(--clr-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Hover effect (≥641 px + pointer) ---------- */
+@media (hover: hover) and (min-width: 641px) {
+  .card img {
+    transition: transform .3s;
+  }
+  .card img:hover { transform: scale(1.05); }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card img { transition: none; }
+}
+
+/* ---------- Medium (641‑1024 px) ---------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-layout {
+    grid-template-areas: "visit cards";
+    grid-template-columns: 250px 1fr;
+  }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Large (≥1025 px) ---------- */
+@media (min-width: 1025px) {
+  .discover-layout {
+    grid-template-areas: "visit cards";
+    grid-template-columns: 300px 1fr;
+  }
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}

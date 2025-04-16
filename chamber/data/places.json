@@ -1,0 +1,73 @@
+[
+    {
+      "id": "atacames",
+      "name": "Playa Atacames",
+      "address": "Malecón de Atacames, Cantón Atacames, Esmeraldas",
+      "description": "The province’s busiest beach: 5 km of sand, water sports and vibrant nightlife.",
+      "image": "../images/atacames.webp"
+    },
+    {
+      "id": "tonsupa",
+      "name": "Playa Tonsupa",
+      "address": "Av. Club del Pacífico, Tonsupa, Esmeraldas",
+      "description": "Calm waves, family‑friendly resorts and perfect sunsets; humpback whales from June to September.",
+      "image": "../images/tonsupa.webp"
+    },
+    {
+      "id": "sua",
+      "name": "Súa",
+      "address": "Parroquia Súa, Cantón Atacames, Esmeraldas",
+      "description": "Fishing village with gentle waters, seafood huts and access to the Peñón del Suicida and Cueva del Amor.",
+      "image": "../images/sua.webp"
+    },
+    {
+      "id": "same",
+      "name": "Playa Same",
+      "address": "Vía Atacames‑Súa‑Same, Cantón Atacames, Esmeraldas",
+      "description": "Five kilometres of fine sand, Club Casablanca and cuisine rich in seafood and coconut.",
+      "image": "../images/same.webp"
+    },
+    {
+      "id": "muisne",
+      "name": "Isla Muisne",
+      "address": "Cantón Muisne, Esmeraldas",
+      "description": "Tropical island surrounded by mangroves and bird refuges; famous for encocados and ceviches.",
+      "image": "../images/muisne.webp"
+    },
+    {
+      "id": "mompiche",
+      "name": "Mompiche",
+      "address": "Vía Muisne‑Mompiche, Cantón Muisne, Esmeraldas",
+      "description": "Former fishing village—now home to the Decameron resort; white sand and crystal‑clear surf breaks.",
+      "image": "../images/mompiche.webp"
+    },
+    {
+      "id": "playa-escondida",
+      "name": "Playa Escondida",
+      "address": "Km 12 Vía Tonchigüe‑Punta Galera, Esmeraldas",
+      "description": "Private 100‑ha reserve with cliffs, primary rainforest and wildlife such as anteaters.",
+      "image": "../images/escondida.webp"
+    },
+    {
+      "id": "las-palmas",
+      "name": "Playa Las Palmas",
+      "address": "Malecón Las Palmas, Ciudad de Esmeraldas",
+      "description": "Urban beach with a 5‑km shoreline, beach bars and the Afro Music & Dance Festival at carnival.",
+      "image": "../images/palmas.webp"
+    },
+    {
+      "id": "las-penas",
+      "name": "Las Peñas",
+      "address": "Cantón Eloy Alfaro, Esmeraldas",
+      "description": "Quiet fishing village, mysterious sea caves and Pelican Island—ideal for seabird watching.",
+      "image": "../images/peñas.webp"
+    },
+    {
+      "id": "la-tolita",
+      "name": "Isla La Tolita Pampa de Oro",
+      "address": "Mouth of the Santiago River, Cantón La Tola, Esmeraldas",
+      "description": "Archaeological park of the La Tolita culture (500 BC–AD 50) with site museum and nature trails.",
+      "image": "../images/tolita.webp"
+    }
+  ]
+  
