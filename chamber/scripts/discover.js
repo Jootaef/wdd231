@@ -1,26 +1,33 @@
-const gallery   = document.getElementById('gallery');
-const learnURL  = 'https://invoyager.com/ecuador/lugares-turisticos-de-esmeraldas/';
+// scripts/discover.js
 
-fetch('data/places.json')
-  .then(res => res.json())
-  .then(places => places.forEach(p => gallery.appendChild(createCard(p))))
-  .catch(err => console.error('Error loading JSON:', err));
+async function loadCards() {
+  try {
+    const response = await fetch('data/beaches.json'); 
+    
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    
+    const data = await response.json();
+    const gallery = document.getElementById('gallery');
 
-function createCard({ name, address, description, image }) {
-  const card = document.createElement('article');
-  card.className = 'card';
-  card.innerHTML = `
-    <figure class="card-img">
-      <img src="${image}" alt="${name}" loading="lazy">
-      <figcaption>${name}</figcaption>
-    </figure>
-    <address>${address}</address>
-    <p>${description}</p>
+    data.forEach(card => {
+      const cardDiv = document.createElement('div');
+      cardDiv.className = 'card';
 
-    <!-- Anchor styled as button -->
-    <a href="${learnURL}" target="_blank" rel="noopener" class="card-btn">
-      Learn&nbsp;More
-    </a>
-  `;
-  return card;
+      cardDiv.innerHTML = `
+        <img src="${card.image}" alt="${card.name}" loading="lazy">
+        <h3>${card.name}</h3>
+        <p class="address">${card.address}</p>
+        <p class="description">${card.description}</p>
+        <button onclick="window.location.href='https://invoyager.com/ecuador/lugares-turisticos-de-esmeraldas/'">Learn More</button>
+      `;
+      
+      gallery.appendChild(cardDiv);
+    });
+  } catch (error) {
+    console.error('Error loading JSON data:', error);
+  }
 }
+
+window.addEventListener('DOMContentLoaded', loadCards);
