@@ -1,4 +1,3 @@
-// scripts/discover.js
 
 async function loadCards() {
   try {
