@@ -1,4 +1,3 @@
-/* ---------- Generate the cards ---------- */
 const gallery   = document.getElementById('gallery');
 const learnURL  = 'https://invoyager.com/ecuador/lugares-turisticos-de-esmeraldas/';
 
